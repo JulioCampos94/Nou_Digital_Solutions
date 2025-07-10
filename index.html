@@ -13,7 +13,7 @@
     <div class="hero-content">
       <h1>Nou Digital Solutions</h1>
       <p>Tecnología inteligente para PYMEs mexicanas</p>
-      <a href="#contacto" class="btn">Contáctanos</a>
+      <a href="#formulario" class="btn">Contáctanos</a>
     </div>
   </header>
 
@@ -75,6 +75,85 @@
     <h2>Contacto</h2>
     <p>Email: contacto@noudigital.com</p>
   </section>
+
+  <section class="block formulario" id="formulario">
+  <h2>Diagnóstico Tecnológico para PYMEs</h2>
+
+  <form id="diagnosticoForm">
+    <!-- Sección 1 -->
+    <fieldset>
+      <legend>Información básica de tu empresa</legend>
+      
+      <label for="giro">1. ¿Cuál es el giro o actividad principal de tu negocio?</label>
+      <input type="text" id="giro" name="giro" required />
+
+      <label for="empleados">2. ¿Cuántos empleados tienen actualmente?</label>
+      <input type="number" id="empleados" name="empleados" min="1" required />
+    </fieldset>
+
+    <!-- Sección 2 -->
+    <fieldset>
+      <legend>Procesos y tareas operativas</legend>
+      
+      <label for="procesos">3. ¿Qué tareas o procesos te consumen más tiempo o energía?</label>
+      <textarea id="procesos" name="procesos" rows="3" required></textarea>
+
+      <label for="software">4. ¿Usas algún software o herramienta digital para controlar ventas, inventario o administración? ¿Cuáles utilizas actualmente?</label>
+      <textarea id="software" name="software" rows="3"></textarea>
+    </fieldset>
+
+    <!-- Sección 3 -->
+    <fieldset>
+      <legend>Datos e información del negocio</legend>
+      
+      <label for="info_ventas">5. ¿Tienes información sobre tus ventas, clientes o productos?</label>
+      <textarea id="info_ventas" name="info_ventas" rows="3" required></textarea>
+
+      <label for="uso_datos">6. ¿Cómo usas esos datos para tomar decisiones?</label>
+      <textarea id="uso_datos" name="uso_datos" rows="3" required></textarea>
+
+      <label for="entender_mejor">7. ¿Qué te gustaría entender mejor sobre tu negocio utilizando esa información?</label>
+      <textarea id="entender_mejor" name="entender_mejor" rows="3"></textarea>
+    </fieldset>
+
+    <!-- Sección 4 -->
+    <fieldset>
+      <legend>Automatización e inteligencia artificial</legend>
+
+      <label for="automatizar">8. Si pudieras automatizar una tarea hoy, ¿cuál sería?</label>
+      <textarea id="automatizar" name="automatizar" rows="3" required></textarea>
+
+      <label>9. ¿Te interesan herramientas tecnológicas que te ayuden a:</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="intereses" value="Predecir ventas" /> Predecir ventas</label>
+        <label><input type="checkbox" name="intereses" value="Generar reportes automáticos" /> Generar reportes automáticos</label>
+        <label><input type="checkbox" name="intereses" value="Analizar comportamiento de clientes" /> Analizar comportamiento de clientes</label>
+        <label><input type="checkbox" name="intereses" value="Optimizar inventario" /> Optimizar inventario</label>
+        <label>Otra (especificar): <input type="text" name="intereses_otra" /></label>
+      </div>
+    </fieldset>
+
+    <!-- Sección 5 -->
+    <fieldset>
+      <legend>Barreras y expectativas</legend>
+
+      <label>10. ¿Qué te ha impedido usar más tecnología en tu negocio?</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" name="barreras" value="Falta de tiempo" /> Falta de tiempo</label>
+        <label><input type="checkbox" name="barreras" value="Costo elevado" /> Costo elevado</label>
+        <label><input type="checkbox" name="barreras" value="No sé por dónde empezar" /> No sé por dónde empezar</label>
+        <label><input type="checkbox" name="barreras" value="No confío en lo digital" /> No confío en lo digital</label>
+        <label>Otra (especificar): <input type="text" name="barreras_otra" /></label>
+      </div>
+
+      <label for="expectativas">11. Si tuvieras una solución hecha a tu medida, ¿qué resultado esperas lograr?</label>
+      <textarea id="expectativas" name="expectativas" rows="3" required></textarea>
+    </fieldset>
+
+    <button type="submit" class="btn">Enviar diagnóstico</button>
+  </form>
+</section>
+
 
   <footer>
     <p>&copy; 2025 Nou Digital Solutions. Todos los derechos reservados.</p>

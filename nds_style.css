@@ -148,3 +148,86 @@ footer {
   line-height: 1.6;
   text-align: center;
 }
+
+
+.formulario {
+  max-width: 900px;
+  margin: 3rem auto 5rem auto;
+  background: white;
+  padding: 2rem 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.formulario h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: #0ea5e9;
+}
+
+fieldset {
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem 1.5rem 2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+legend {
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0 0.5rem;
+  color: #1e293b;
+}
+
+label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+input[type="text"],
+input[type="number"],
+textarea {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  margin-top: 0.3rem;
+  border-radius: 6px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+  resize: vertical;
+  font-family: inherit;
+}
+
+.checkbox-group {
+  margin-top: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.checkbox-group label {
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.btn {
+  background-color: #0ea5e9;
+  color: white;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+.btn:hover {
+  background-color: #0284c7;
+}
