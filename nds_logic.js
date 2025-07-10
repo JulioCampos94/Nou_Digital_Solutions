@@ -1,2 +1,2 @@
-// Aquí podrías agregar funcionalidad más adelante
-console.log("Página cargada correctamente.");
+// Ejemplo de comportamiento: mensaje en consola
+console.log("Nou Digital Solutions – página cargada correctamente.");
