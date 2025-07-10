@@ -75,8 +75,23 @@ body {
   padding: 2rem;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  flex: 1 1 280px;
+  flex: 1 1 260px;
   max-width: 300px;
+  text-align: center;
+}
+
+.card h3 {
+  text-align: center;
+  margin: 0.75rem 0;
+}
+
+.card p {
+  text-align: center;
+}
+
+.icono {
+  color: #0ea5e9;
+  margin-bottom: 0.5rem;
 }
 
 footer {
@@ -85,13 +100,4 @@ footer {
   text-align: center;
   font-size: 0.9rem;
   color: #555;
-}
-
-.card h3 {
-  text-align: center;
-  margin-bottom: 0.5rem;
-}
-
-.card p {
-  text-align: center;
 }
