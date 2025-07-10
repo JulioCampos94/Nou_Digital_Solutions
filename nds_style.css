@@ -86,3 +86,12 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
+.card h3 {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  text-align: center;
+}
