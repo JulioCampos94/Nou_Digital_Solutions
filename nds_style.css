@@ -302,20 +302,35 @@ textarea {
 .team-card .btn:hover {
   background-color: #4b4dcf;
 }
-
+/* NAVBAR BASE */
 .navbar {
   background-color: #003366;
-  padding: 1rem;
+  padding: 0.75rem 1.5rem;
   position: sticky;
   top: 0;
   z-index: 1000;
 }
 
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: bold;
+  font-family: 'Inter', sans-serif;
+}
+
+/* NAV LINKS */
 .navbar-list {
   list-style: none;
   display: flex;
   gap: 2rem;
-  justify-content: center;
   margin: 0;
   padding: 0;
 }
@@ -329,4 +344,40 @@ textarea {
 
 .navbar-list li a:hover {
   text-decoration: underline;
+}
+
+/* TOGGLE BUTTON */
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-list {
+    display: none;
+    flex-direction: column;
+    background-color: #003366;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .navbar-list.show {
+    display: flex;
+  }
+
+  .navbar-list li {
+    margin: 0.5rem 0;
+  }
 }
