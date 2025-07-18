@@ -121,7 +121,7 @@
   <div class="block formulario">
     <h2>Diagnóstico Tecnológico para PYMEs</h2>
 
-    <form id="diagnosticoForm">
+    <form id="diagnosticoForm" method = "POST">
 
       <!-- Sección 1: Información básica -->
       <fieldset>
@@ -235,6 +235,14 @@
   <footer>
     <p>&copy; 2025 Nou Digital Solutions. Todos los derechos reservados.</p>
   </footer>
+
+  <script src="https://cdn.emailjs.com/sdk/3.2/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init('NodGXAGZagwbOp8lV');
+  })();
+</script>
+<script src="nds_logic.js"></script>
 
   <script src="nds_logic.js"></script>
 </body>
