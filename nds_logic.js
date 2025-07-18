@@ -1,7 +1,3 @@
-// ✅ Nueva importación si estás usando módulos (ES6)
-import emailjs from '@emailjs/browser';
-
-
 // Mensaje al cargar la página
 console.log("Nou Digital Solutions – página cargada correctamente.");
 
