@@ -121,94 +121,119 @@
   <div class="block formulario">
     <h2>Diagnóstico Tecnológico para PYMEs</h2>
 
-   <form id="diagnosticoForm">
-  <h2>Diagnóstico tecnológico</h2>
+    <form id="diagnosticoForm">
 
-  <!-- Nombre -->
-  <label for="name">Tu nombre</label>
-  <input type="text" id="name" name="name" required placeholder="Nombre completo" />
-
-  <!-- Email -->
-  <label for="email">Tu correo electrónico</label>
-  <input type="email" id="email" name="email" required placeholder="tucorreo@dominio.com" />
-
-  <!-- Giro -->
-  <label for="giro">¿Cuál es el giro o actividad principal de tu empresa?</label>
-  <input type="text" name="giro" required />
-
-  <!-- Empleados -->
-  <label for="empleados">¿Cuántos empleados tienen actualmente?</label>
-  <input type="number" name="empleados" required />
-
-  <!-- Antigüedad -->
-  <label for="antiguedad">¿Cuánto tiempo llevan operando?</label>
-  <input type="text" name="antiguedad" required />
-
-  <!-- Procesos -->
-  <label for="procesos">¿Qué procesos toman más tiempo actualmente?</label>
-  <textarea name="procesos" required></textarea>
-
-  <!-- Software -->
-  <label for="software">¿Qué software o herramientas usan?</label>
-  <textarea name="software" required></textarea>
-
-  <!-- Nivel de digitalización -->
-  <label for="nivel_digitalizacion">¿Cómo calificas el nivel de digitalización de tu empresa?</label>
-  <select name="nivel_digitalizacion" required>
-    <option value="">Selecciona una opción</option>
-    <option value="Bajo">Bajo</option>
-    <option value="Medio">Medio</option>
-    <option value="Alto">Alto</option>
-  </select>
-
-  <!-- Información de ventas -->
-  <label for="info_ventas">¿Llevan registro de ventas, clientes o productos?</label>
-  <textarea name="info_ventas" required></textarea>
-
-  <!-- Uso de datos -->
-  <label for="uso_datos">¿Usan esos datos para tomar decisiones?</label>
-  <textarea name="uso_datos" required></textarea>
-
-  <!-- Objetivos con datos -->
-  <label for="objetivos_datos">¿Qué te gustaría lograr con análisis de datos?</label>
-  <textarea name="objetivos_datos" required></textarea>
-
-  <!-- Automatización -->
-  <label for="automatizar">¿Qué tarea te gustaría automatizar?</label>
-  <textarea name="automatizar" required></textarea>
-
-  <!-- Intereses tecnológicos -->
-  <label>¿Qué áreas tecnológicas te interesan?</label>
-  <div>
-    <label><input type="checkbox" name="intereses" value="ERP"> ERP</label>
-    <label><input type="checkbox" name="intereses" value="CRM"> CRM</label>
-    <label><input type="checkbox" name="intereses" value="Dashboard"> Dashboard</label>
-    <label><input type="checkbox" name="intereses" value="Automatización"> Automatización</label>
-    <input type="text" name="intereses_otra" placeholder="Otra área de interés" />
+      <fieldset>
+       <div class="campo">
+    <label for="name">Nombre:</label>
+    <input type="text" name="name" id="name" required />
   </div>
 
-  <!-- Barreras -->
-  <label>¿Qué obstáculos enfrentas para implementar tecnología?</label>
-  <div>
-    <label><input type="checkbox" name="barreras" value="Falta de tiempo"> Falta de tiempo</label>
-    <label><input type="checkbox" name="barreras" value="Falta de conocimiento"> Falta de conocimiento</label>
-    <label><input type="checkbox" name="barreras" value="Costo"> Costo</label>
-    <input type="text" name="barreras_otra" placeholder="Otra barrera" />
+  <div class="campo">
+    <label for="email">Correo electrónico:</label>
+    <input type="email" name="email" id="email" required />
   </div>
+      </fieldset>
 
-  <!-- Expectativas -->
-  <label for="expectativas">¿Qué esperas lograr con soluciones tecnológicas?</label>
-  <textarea name="expectativas" required></textarea>
+      <!-- Sección 1: Información básica -->
+      <fieldset>
+        <legend>Información básica de tu empresa</legend>
 
-  <!-- Botón -->
-  <button type="submit">Enviar diagnóstico</button>
-</form>
+        <label for="giro">1. ¿Cuál es el giro o actividad principal de tu negocio?</label>
+        <input type="text" id="giro" name="giro" required placeholder="Ej. Comercio, manufactura, servicios..." />
 
-<!-- Mensaje de éxito -->
-<div id="mensaje-exito" class="mensaje-exito" style="display: none;">
-  ¡Gracias! Hemos recibido tu diagnóstico y te contactaremos pronto.
-</div>
+        <label for="empleados">2. ¿Cuántos empleados tienen actualmente?</label>
+        <input type="number" id="empleados" name="empleados" min="1" required placeholder="Número de empleados" />
 
+        <label for="antiguedad">3. ¿Cuánto tiempo lleva operando tu empresa?</label>
+        <select id="antiguedad" name="antiguedad" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="menos_1_ano">Menos de 1 año</option>
+          <option value="1_3_anos">1 a 3 años</option>
+          <option value="4_10_anos">4 a 10 años</option>
+          <option value="mas_10_anos">Más de 10 años</option>
+        </select>
+      </fieldset>
+
+      <!-- Sección 2: Procesos y herramientas -->
+      <fieldset>
+        <legend>Procesos y herramientas digitales</legend>
+
+        <label for="procesos">4. ¿Qué tareas o procesos consumen más tiempo o esfuerzo en tu empresa?</label>
+        <textarea id="procesos" name="procesos" rows="3" required placeholder="Describe tareas o procesos específicos"></textarea>
+
+        <label for="software">5. ¿Qué software o herramientas digitales utilizas para gestión (ventas, inventario, administración)?</label>
+        <textarea id="software" name="software" rows="3" placeholder="Ej. Excel, ERP, POS, etc."></textarea>
+
+        <label for="nivel_digitalizacion">6. ¿Cómo evaluarías el nivel de digitalización de tu empresa?</label>
+        <select id="nivel_digitalizacion" name="nivel_digitalizacion" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="ninguno">Ninguno / Muy bajo</option>
+          <option value="bajo">Bajo</option>
+          <option value="medio">Medio</option>
+          <option value="alto">Alto</option>
+          <option value="muy_alto">Muy alto / Totalmente digitalizado</option>
+        </select>
+      </fieldset>
+
+      <!-- Sección 3: Uso de datos e información -->
+      <fieldset>
+        <legend>Datos e información para la toma de decisiones</legend>
+
+        <label for="info_ventas">7. ¿Cuentas con registros o información sobre tus ventas, clientes o productos?</label>
+        <select id="info_ventas" name="info_ventas" required>
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option value="no">No</option>
+          <option value="parcial">Sí, pero es limitada o poco organizada</option>
+          <option value="si">Sí, bien organizada y actualizada</option>
+        </select>
+
+        <label for="uso_datos">8. ¿Cómo utilizas esos datos para tomar decisiones en tu empresa?</label>
+        <textarea id="uso_datos" name="uso_datos" rows="3" required placeholder="Ej. Revisamos reportes mensuales, hacemos análisis de ventas"></textarea>
+
+        <label for="objetivos_datos">9. ¿Qué te gustaría entender o mejorar en tu negocio a partir del análisis de datos?</label>
+        <textarea id="objetivos_datos" name="objetivos_datos" rows="3" placeholder="Ej. Mejorar inventarios, identificar clientes fieles"></textarea>
+      </fieldset>
+
+      <!-- Sección 4: Automatización e inteligencia artificial -->
+      <fieldset>
+        <legend>Automatización y tecnología avanzada</legend>
+
+        <label for="automatizar">10. Si pudieras automatizar o mejorar una tarea o proceso hoy, ¿cuál sería?</label>
+        <textarea id="automatizar" name="automatizar" rows="3" required></textarea>
+
+        <label>11. ¿Te interesan herramientas tecnológicas que te ayuden a:</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="intereses" value="Predecir ventas" /> Predecir ventas</label>
+          <label><input type="checkbox" name="intereses" value="Generar reportes automáticos" /> Generar reportes automáticos</label>
+          <label><input type="checkbox" name="intereses" value="Analizar comportamiento de clientes" /> Analizar comportamiento de clientes</label>
+          <label><input type="checkbox" name="intereses" value="Optimizar inventario" /> Optimizar inventario</label>
+          <label><input type="checkbox" name="intereses" value="Automatizar atención al cliente" /> Automatizar atención al cliente (chatbots)</label>
+          <label>Otra (especificar): <input type="text" name="intereses_otra" /></label>
+        </div>
+      </fieldset>
+
+      <!-- Sección 5: Barreras y expectativas -->
+      <fieldset>
+        <legend>Barreras y expectativas</legend>
+
+        <label>12. ¿Qué obstáculos o dificultades has tenido para implementar más tecnología en tu empresa?</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="barreras" value="Falta de tiempo" /> Falta de tiempo</label>
+          <label><input type="checkbox" name="barreras" value="Costo elevado" /> Costo elevado</label>
+          <label><input type="checkbox" name="barreras" value="Falta de conocimiento" /> Falta de conocimiento o capacitación</label>
+          <label><input type="checkbox" name="barreras" value="Resistencia al cambio" /> Resistencia al cambio por parte del equipo</label>
+          <label><input type="checkbox" name="barreras" value="No sé por dónde empezar" /> No sé por dónde empezar</label>
+          <label><input type="checkbox" name="barreras" value="No confío en lo digital" /> No confío en lo digital</label>
+          <label>Otra (especificar): <input type="text" name="barreras_otra" /></label>
+        </div>
+
+        <label for="expectativas">13. Si tuvieras una solución tecnológica a tu medida, ¿qué resultados esperas lograr?</label>
+        <textarea id="expectativas" name="expectativas" rows="3" required></textarea>
+      </fieldset>
+
+      <button type="submit" class="btnForm">Enviar información</button>
+    </form>
   </div>
 </section>
 
@@ -229,8 +254,8 @@
     emailjs.init("NodGXAGZagwbOp8lV");
   })();
 </script>
-
 <script src="nds_logic.js"></script>
+
 
 </body>
 </html>
