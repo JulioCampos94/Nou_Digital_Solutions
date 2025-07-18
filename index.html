@@ -9,6 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+  <nav class="navbar">
+  <ul class="navbar-list">
+    <li><a href="#hero">Inicio</a></li>
+    <li><a href="#servicios">Servicios</a></li>
+    <li><a href="#equipo">Nuestro Equipo</a></li>
+    <li><a href="#formulario">Diagnóstico</a></li>
+    <li><a href="#contacto">Contacto</a></li>
+  </ul>
+</nav>
   <header class="hero">
     <div class="hero-content">
       <h1>Nou Digital Solutions</h1>
@@ -56,30 +65,49 @@
   </section>
 
 <!-- Sección: Acerca de Nosotros -->
-<section id="nosotros" class="about-section">
-  <div class="container">
-    <h2>Acerca de Nosotros</h2>
-    <p class="intro">
-      Somos un equipo multidisciplinario formado por tres amigos que se conocieron durante su etapa universitaria.
-      Nos une la pasión por resolver problemas complejos del día a día y por mejorar la calidad de vida, ya sea de personas o empresas.
-      Siempre estamos en constante búsqueda de nuevas oportunidades donde podamos aplicar nuestro conocimiento y experiencia para generar un impacto positivo.
+<section id="equipo" style="background-color: #f4f4f4; padding: 4rem 1rem;">
+  <div class="container" style="max-width: 1000px; margin: 0 auto; text-align: center;">
+    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Nuestro Equipo</h2>
+    <p style="font-size: 1.1rem; margin-bottom: 2.5rem; line-height: 1.6;">
+      Somos un equipo multidisciplinario formado por tres profesionales que coincidimos durante nuestra etapa universitaria.
+      Nos une la pasión por resolver problemas complejos del día a día y por mejorar la calidad de vida y los servicios de personas y empresas.
+      Siempre estamos en búsqueda de nuevas oportunidades para aplicar nuestro conocimiento y experiencia en beneficio de las PYMEs mexicanas.
     </p>
-    <div class="team-preview">
-      <div class="team-card">
-        <p>Apasionado por la innovación tecnológica y la resolución de problemas complejos. Busca siempre optimizar procesos con soluciones inteligentes.</p>
-        <a href="equipo.html#miembro1" class="btn">Leer más</a>
+
+    <div style="display: grid; grid-template-columns: 1fr; gap: 2rem; text-align: left;">
+      <!-- Perfil 1 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="margin-bottom: 1rem;">Especialista en análisis térmico y de datos</h3>
+        <p>
+          Ingeniero mecánico con experiencia internacional, especializado en ciencias térmicas y análisis de datos. Ha liderado proyectos de desarrollo de herramientas analíticas, análisis de causa raíz, y soluciones de aprendizaje automático para mejorar procesos industriales. Cuenta con formación avanzada en simulaciones CFD, análisis térmico, y programación científica.
+        </p>
       </div>
-      <div class="team-card">
-        <p>Experiencia en análisis de datos y desarrollo de soluciones digitales orientadas a PYMEs. Firme creyente en la democratización tecnológica.</p>
-        <a href="equipo.html#miembro2" class="btn">Leer más</a>
+
+      <!-- Perfil 2 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="margin-bottom: 1rem;">Consultor en soluciones innovadoras y comercialización</h3>
+        <p>
+          Ingeniero mecánico con visión emprendedora, enfocado en la creación y comercialización de soluciones industriales. Ha participado en el desarrollo de productos aplicados a sectores como el automotriz, alimentario y agrícola. Su enfoque está en la neuroventa y en acercar tecnología útil a quienes más la necesitan, con un fuerte compromiso social.
+        </p>
       </div>
-      <div class="team-card">
-        <p>Motivado por el impacto social de la tecnología. Siempre en búsqueda de herramientas que hagan la vida más simple y eficiente.</p>
-        <a href="equipo.html#miembro3" class="btn">Leer más</a>
+
+      <!-- Perfil 3 -->
+      <div style="background: white; padding: 1.5rem; border-radius: 1rem; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        <h3 style="margin-bottom: 1rem;">Ingeniero de software e inteligencia artificial</h3>
+        <p>
+          Ingeniero mecatrónico con experiencia en desarrollo de software, APIs, análisis de datos y servicios en la nube. Ha trabajado en startups y grandes empresas tecnológicas, y cuenta con formación en procesamiento de lenguaje natural y machine learning. Apasionado por la tecnología y su capacidad de simplificar la vida de las personas.
+        </p>
       </div>
+    </div>
+
+    <div style="margin-top: 3rem;">
+      <a href="equipo.html" style="background-color: #003366; color: white; padding: 0.75rem 1.5rem; border-radius: 8px; text-decoration: none;">
+        Conoce más sobre nosotros
+      </a>
     </div>
   </div>
 </section>
+
 
 
   <section class="formulario-section" id="formulario">

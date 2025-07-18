@@ -302,3 +302,31 @@ textarea {
 .team-card .btn:hover {
   background-color: #4b4dcf;
 }
+
+.navbar {
+  background-color: #003366;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-list li a:hover {
+  text-decoration: underline;
+}
