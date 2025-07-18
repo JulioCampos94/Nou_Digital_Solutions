@@ -1,3 +1,7 @@
+// ✅ Nueva importación si estás usando módulos (ES6)
+import emailjs from '@emailjs/browser';
+
+
 // Mensaje al cargar la página
 console.log("Nou Digital Solutions – página cargada correctamente.");
 
@@ -44,13 +48,15 @@ form.addEventListener('submit', function (e) {
   }
   barrerasInput.value = barrerasCombined;
 
-  // Enviar con EmailJS
-  emailjs.sendForm("service_ze32riq", "template_dloic2p", this)
+  // Enviar con EmailJS (✅ con clave pública como 4to parámetro)
+  emailjs.sendForm("service_ze32riq", "template_dloic2p", form, "NodGXAGZagwbOp8lV")
     .then(() => {
+      console.log('✅ Correo enviado correctamente');
       form.reset();
       mostrarMensajeExito();
-    }, (error) => {
-      console.error('Error enviando el formulario:', error);
+    })
+    .catch((error) => {
+      console.error('❌ Error al enviar el correo:', error);
       alert('Ocurrió un error al enviar el formulario. Intenta nuevamente más tarde.');
     });
 });
