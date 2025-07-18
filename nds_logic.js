@@ -48,6 +48,12 @@ form.addEventListener('submit', function (e) {
   }
   barrerasInput.value = barrerasCombined;
 
+    // ✅ Agrega este log antes de enviar
+  console.log('📨 Enviando datos:', {
+    intereses: interesesCombined,
+    barreras: barrerasCombined
+  });
+
   // Enviar con EmailJS (✅ con clave pública como 4to parámetro)
   emailjs.sendForm("service_ze32riq", "template_dloic2p", form, "NodGXAGZagwbOp8lV")
     .then(() => {
