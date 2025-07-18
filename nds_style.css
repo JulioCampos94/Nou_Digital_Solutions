@@ -381,3 +381,18 @@ textarea {
     margin: 0.5rem 0;
   }
 }
+
+.mensaje-exito
+{
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #4BB543;
+  color: white;
+  padding: 16px 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  z-index: 9999;
+  font-weight: bold;
+}

@@ -1,25 +1,23 @@
 // Mensaje al cargar la página
 console.log("Nou Digital Solutions – página cargada correctamente.");
 
-// Inicializa EmailJS con tu Public Key (User ID)
-emailjs.init('NodGXAGZagwbOp8lV');  
+// Inicializa EmailJS
+emailjs.init("NodGXAGZagwbOp8lV");
 
 const form = document.getElementById('diagnosticoForm');
+const mensajeExito = document.getElementById('mensaje-exito');
 
 form.addEventListener('submit', function (e) {
   e.preventDefault();
 
-  // Preparamos los campos combinados para checkboxes en el template
-  // (Para que EmailJS reciba strings con los valores seleccionados)
-  
-  // Combinar intereses seleccionados
+  // Combinar intereses
   const interesesChecked = [...form.querySelectorAll('input[name="intereses"]:checked')].map(el => el.value);
   const interesesOtra = form.querySelector('input[name="intereses_otra"]').value.trim();
   let interesesCombined = interesesChecked.join(', ');
   if (interesesOtra) {
     interesesCombined += (interesesCombined ? ', ' : '') + interesesOtra;
   }
-  // Creamos un campo oculto temporal para enviarlo a EmailJS
+
   let interesesInput = form.querySelector('input[name="intereses_combined"]');
   if (!interesesInput) {
     interesesInput = document.createElement('input');
@@ -29,13 +27,14 @@ form.addEventListener('submit', function (e) {
   }
   interesesInput.value = interesesCombined;
 
-  // Combinar barreras seleccionadas
+  // Combinar barreras
   const barrerasChecked = [...form.querySelectorAll('input[name="barreras"]:checked')].map(el => el.value);
   const barrerasOtra = form.querySelector('input[name="barreras_otra"]').value.trim();
   let barrerasCombined = barrerasChecked.join(', ');
   if (barrerasOtra) {
     barrerasCombined += (barrerasCombined ? ', ' : '') + barrerasOtra;
   }
+
   let barrerasInput = form.querySelector('input[name="barreras_combined"]');
   if (!barrerasInput) {
     barrerasInput = document.createElement('input');
@@ -45,21 +44,33 @@ form.addEventListener('submit', function (e) {
   }
   barrerasInput.value = barrerasCombined;
 
-  // Envía el formulario a EmailJS
-  emailjs.sendForm('service_ze32riq', 'template_f95s5sb', this)
+  // Enviar con EmailJS
+  emailjs.sendForm("service_ze32riq", "template_dloic2p", this)
     .then(() => {
-      alert('¡Gracias por enviar tu diagnóstico! Nos pondremos en contacto contigo pronto.');
       form.reset();
+      mostrarMensajeExito();
     }, (error) => {
       console.error('Error enviando el formulario:', error);
       alert('Ocurrió un error al enviar el formulario. Intenta nuevamente más tarde.');
     });
 });
 
-// Toggle menú hamburguesa (si tienes menú hamburguesa)
+// Toggle menú hamburguesa
 const navToggle = document.getElementById('navbar-toggle');
-if(navToggle) {
+if (navToggle) {
   navToggle.addEventListener('click', function () {
     document.getElementById('navbar-list').classList.toggle('show');
   });
+}
+
+// Mostrar mensaje visual de éxito
+function mostrarMensajeExito() {
+  if (!mensajeExito) return;
+
+  mensajeExito.style.display = 'block';
+  mensajeExito.scrollIntoView({ behavior: 'smooth' });
+
+  setTimeout(() => {
+    mensajeExito.style.display = 'none';
+  }, 4000);
 }
