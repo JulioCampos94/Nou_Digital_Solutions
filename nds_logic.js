@@ -8,7 +8,15 @@ const form = document.getElementById('diagnosticoForm');
 const mensajeExito = document.getElementById('mensaje-exito');
 
 form.addEventListener('submit', function (e) {
-  e.preventDefault();
+
+    e.preventDefault();
+
+    // ✅ Verificar que el captcha fue completado
+  const recaptchaResponse = grecaptcha.getResponse();
+  if (!recaptchaResponse) {
+    alert("Por favor, verifica que no eres un robot.");
+    return;
+  }
 
   // Combinar intereses
   const interesesChecked = [...form.querySelectorAll('input[name="intereses"]:checked')].map(el => el.value);
