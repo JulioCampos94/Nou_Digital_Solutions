@@ -7,115 +7,130 @@
   <link rel="stylesheet" href="nds_style.css" />
   <style>
     body {
-      font-family: sans-serif;
+      font-family: "Segoe UI", Roboto, sans-serif;
       margin: 0;
       padding: 0;
-      background-color: #f9f9f9;
+      background-color: #f4f7fa;
+      color: #333;
     }
 
     header {
-      background-color: #003366;
-      color: white;
-      padding: 2rem 1rem;
+      background-color: #002b5c;
+      color: #fff;
+      padding: 3rem 1rem;
       text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 2.5rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      margin-top: 0.5rem;
     }
 
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      padding: 2rem 1rem;
+      padding: 3rem 1rem;
     }
 
     .bio-card {
-      background: white;
-      margin-bottom: 2rem;
-      padding: 2rem;
+      background: #ffffff;
       border-radius: 1rem;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      padding: 2rem;
+      margin-bottom: 2.5rem;
+      transition: transform 0.2s;
     }
 
-    h2, h3 {
-      color: #003366;
+    .bio-card:hover {
+      transform: translateY(-4px);
     }
 
-    a.volver {
+    h2 {
+      font-size: 1.5rem;
+      color: #002b5c;
+      margin-bottom: 1rem;
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: #005a9c;
+      margin-top: 1.5rem;
+    }
+
+    ul {
+      padding-left: 1.2rem;
+      margin-top: 0.5rem;
+    }
+
+    ul li {
+      margin-bottom: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .volver {
       display: inline-block;
-      margin-top: 2rem;
-      background: #003366;
-      color: white;
-      padding: 0.75rem 1.5rem;
-      border-radius: 8px;
+      margin-top: 3rem;
+      background-color: #002b5c;
+      color: #fff;
+      padding: 0.75rem 2rem;
+      border-radius: 0.5rem;
       text-decoration: none;
+      font-weight: bold;
+      transition: background 0.2s;
+    }
+
+    .volver:hover {
+      background-color: #004a99;
     }
   </style>
 </head>
 <body>
 
 <header>
-  <h1>Conoce al equipo</h1>
-  <p>Personas apasionadas por mejorar procesos y transformar ideas en soluciones.</p>
+  <h1>Nuestro Equipo</h1>
+  <p>Profesionales comprometidos con la innovación, la tecnología y el desarrollo de soluciones que transforman.</p>
 </header>
 
 <div class="container">
 
   <!-- Perfil 1 -->
   <div class="bio-card">
-    <h2>Ingeniero en ciencias térmicas y datos</h2>
+    <h2>Especialista en Ciencias Térmicas y Análisis de Datos</h2>
     <p>
-      Ingeniero mecánico con experiencia internacional, especializado en ciencias térmicas y análisis de datos.
-      Apasionado por aplicar conceptos de ingeniería para resolver problemas industriales y mejorar la competitividad de las PYMEs mexicanas.
+      Ingeniero mecánico con formación internacional, experto en ciencias térmicas y análisis de datos aplicados a la industria. Su enfoque combina rigor técnico con visión estratégica para impulsar la eficiencia y competitividad de las PYMEs mexicanas.
     </p>
     <h3>Experiencia Profesional</h3>
     <ul>
-      <li>Analista de Datos y Desempeño Térmico: desarrollo de herramientas con Python, SQL y plataformas de análisis.</li>
-      <li>Aplicación de estadísticas avanzadas para análisis de causa raíz y soluciones predictivas.</li>
-      <li>Ingeniero en Desempeño Térmico en plantas de ciclo combinado.</li>
+      <li>Desarrollo de herramientas analíticas con Python, SQL y plataformas de visualización.</li>
+      <li>Implementación de metodologías estadísticas para diagnóstico y mantenimiento predictivo.</li>
+      <li>Ingeniero de desempeño térmico en plantas de generación eléctrica de ciclo combinado.</li>
     </ul>
-    <h3>Educación y Habilidades</h3>
+    <h3>Formación y Habilidades</h3>
     <ul>
       <li>Maestría y licenciatura en Ingeniería Mecánica.</li>
       <li>Certificación en Análisis de Datos por Google.</li>
-      <li>Programación en Python, MATLAB, R, C++, SQL, entre otros.</li>
+      <li>Dominio de Python, MATLAB, R, C++, SQL y otras tecnologías.</li>
     </ul>
   </div>
 
   <!-- Perfil 2 -->
   <div class="bio-card">
-    <h2>Consultor en innovación y comercialización</h2>
+    <h2>Consultor en Innovación y Comercialización Tecnológica</h2>
     <p>
-      Criado en una familia comerciante, combina el pensamiento emprendedor con formación técnica como ingeniero mecánico. Cree que la tecnología debe estar al servicio del bienestar colectivo y el espíritu humano.
+      Ingeniero mecánico con raíces emprendedoras y un enfoque humanista de la tecnología. Su experiencia abarca desde el desarrollo de productos hasta estrategias comerciales que conectan soluciones técnicas con necesidades reales del mercado.
     </p>
     <h3>Experiencia Profesional</h3>
     <ul>
-      <li>Diseño de soluciones aplicadas a la industria automotriz, alimenticia y agrícola.</li>
-      <li>Patentes y desarrollo de productos tecnológicos.</li>
-      <li>Experto en comercialización basada en neuroventas y prospección estratégica.</li>
+      <li>Diseño de soluciones para los sectores automotriz, alimentario y agrícola.</li>
+      <li>Registro de patentes y desarrollo de productos tecnológicos.</li>
+      <li>Especialista en neuroventas y prospección estratégica para mercados técnicos.</li>
     </ul>
   </div>
 
   <!-- Perfil 3 -->
-  <div class="bio-card">
-    <h2>Ingeniero en software e inteligencia artificial</h2>
-    <p>
-      Ingeniero mecatrónico con pasión por crear software útil que mejore la calidad de vida. Curioso por naturaleza, se mantiene actualizado en las últimas tecnologías.
-    </p>
-    <h3>Experiencia Profesional</h3>
-    <ul>
-      <li>Desarrollo de software, APIs, análisis de datos, microservicios y servicios cloud (AWS, Google Cloud).</li>
-      <li>Colaboración con startups y empresas tecnológicas FAANG.</li>
-    </ul>
-    <h3>Educación y Habilidades</h3>
-    <ul>
-      <li>Maestría en Ingeniería Eléctrica, con enfoque en NLP y machine learning.</li>
-      <li>Programación en C, C++, Go, Python, JavaScript, TypeScript, entre otros.</li>
-    </ul>
-  </div>
-
-  <div style="text-align: center;">
-    <a href="index.html" class="volver">← Volver al inicio</a>
-  </div>
-
-</div>
-
-</body>
-</html>
+  <div cla
