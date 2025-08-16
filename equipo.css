@@ -1,0 +1,96 @@
+/* Hereda tipografía y variables de nds_style.css */
+/* Base de página */
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background-color: #002b5c;
+  color: #fff;
+  padding: 3rem 1rem;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  opacity: 0.95;
+}
+
+/* Contenedor (grid responsivo, sobrio) */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+/* Tarjetas de biografía */
+.bio-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 2rem;
+  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.bio-card:hover {
+  background: #f8fafc;             /* sutil, sin mover */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+/* Títulos y subtítulos dentro de cada tarjeta */
+.bio-card h2 {
+  font-size: 1.5rem;
+  color: #002b5c;
+  margin-bottom: 1rem;
+}
+
+.bio-card h3 {
+  font-size: 1.1rem;
+  color: #334155;
+  margin-top: 1.5rem;
+}
+
+/* Listas */
+.bio-card ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.bio-card ul li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Botón volver */
+.volver-wrap {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.volver {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #002b5c;
+  color: #fff;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: background 0.2s ease-in-out;
+}
+
+.volver:hover {
+  background-color: #004a99;
+}
