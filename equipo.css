@@ -1,87 +1,74 @@
-/* Hereda tipografía y variables de nds_style.css */
-/* Base de página */
+/* Base: mantiene coherencia con el resto del sitio */
 body {
   background-color: #f9f9f9;
   color: #333;
   line-height: 1.6;
 }
 
-/* Encabezado */
-header {
+/* Encabezado sobrio */
+.team-header {
   background-color: #002b5c;
   color: #fff;
   padding: 3rem 1rem;
   text-align: center;
 }
-
-header h1 {
+.team-header h1 {
   margin: 0;
-  font-size: 2.5rem;
+  font-size: 2.4rem;
 }
-
-header p {
-  font-size: 1.2rem;
+.team-header p {
+  font-size: 1.1rem;
   margin-top: 0.5rem;
   opacity: 0.95;
 }
 
-/* Contenedor (grid responsivo, sobrio) */
+/* Contenedor en columna (uno debajo de otro) */
 .container {
   max-width: 1000px;
   margin: 0 auto;
   padding: 3rem 1rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
 }
 
-/* Tarjetas de biografía */
+/* Tarjeta/bloque de cada perfil */
 .bio-card {
   background: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.06);
   padding: 2rem;
-  transition: background 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  margin-bottom: 2rem; /* asegura que cada perfil quede en su propio “renglón” */
 }
 
-.bio-card:hover {
-  background: #f8fafc;             /* sutil, sin mover */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-
-/* Títulos y subtítulos dentro de cada tarjeta */
+/* Títulos dentro de cada perfil */
 .bio-card h2 {
   font-size: 1.5rem;
   color: #002b5c;
   margin-bottom: 1rem;
 }
-
 .bio-card h3 {
   font-size: 1.1rem;
   color: #334155;
   margin-top: 1.5rem;
 }
 
-/* Listas */
+/* Párrafos y listas legibles */
+.bio-card p {
+  margin: 0 0 1rem 0;
+}
 .bio-card ul {
   padding-left: 1.2rem;
   margin-top: 0.5rem;
 }
-
 .bio-card ul li {
   margin-bottom: 0.5rem;
-  line-height: 1.6;
 }
 
 /* Botón volver */
 .volver-wrap {
-  grid-column: 1 / -1;
   text-align: center;
+  margin-top: 1rem;
 }
-
 .volver {
   display: inline-block;
-  margin-top: 1rem;
   background-color: #002b5c;
   color: #fff;
   padding: 0.75rem 2rem;
@@ -90,7 +77,6 @@ header p {
   font-weight: 700;
   transition: background 0.2s ease-in-out;
 }
-
 .volver:hover {
   background-color: #004a99;
 }
