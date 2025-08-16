@@ -88,27 +88,36 @@ body {
 
 /* ===== HERO ===== */
 .hero {
-  background: linear-gradient(to right, #0f172a, #1e293b);
+  background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #fff;
   text-align: center;
-  padding: 12rem 2rem;
+  padding: 6rem 2rem; /* menos altura */
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.hero-content {
-  max-width: 900px;
+  flex-direction: column;
+  border-bottom: 4px solid #38bdf8; /* toque profesional */
 }
 
 .hero h1 {
-  font-size: 3.2rem;
-  margin-bottom: 1.5rem;
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+  font-weight: 800;
 }
 
 .hero p {
-  font-size: 1.25rem;
-  margin-bottom: 2.5rem;
+  font-size: 1.15rem;
+  margin-bottom: 2rem;
+  max-width: 700px;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+.hero .btn {
+  font-size: 1rem;
+  padding: 0.65rem 1.5rem;
+  font-weight: 700;
+  border-radius: 6px;
 }
 
 .btn {
@@ -342,6 +351,26 @@ textarea {
   font-weight: bold;
 }
 
+/* ===== CONTACTO MODIFICADO ===== */
+.contacto {
+  background-color: #f1f5f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 2rem;
+}
+
+.contacto p {
+  background-color: #fff;
+  padding: 2rem 3rem;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-size: 1.1rem;
+  color: #1e293b;
+  max-width: 600px;
+  text-align: center;
+}
+
 /* ===== FOOTER ===== */
 footer {
   background-color: #e5e7eb;
@@ -350,3 +379,5 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
+
