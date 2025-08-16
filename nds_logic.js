@@ -90,3 +90,24 @@ function mostrarMensajeExito() {
     mensajeExito.style.display = 'none';
   }, 4000);
 }
+
+// Abrir y cerrar modal
+const openBtn = document.getElementById('openForm');
+const modal = document.getElementById('formularioModal');
+const closeBtn = document.querySelector('.close-modal');
+
+openBtn.addEventListener('click', e => {
+  e.preventDefault();
+  modal.style.display = 'flex';
+});
+
+closeBtn.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+
+// Cerrar si clic fuera del contenido
+window.addEventListener('click', e => {
+  if (e.target === modal) {
+    modal.style.display = 'none';
+  }
+});

@@ -29,7 +29,7 @@
   <div class="hero-content">
     <h1>Nou Digital Solutions</h1>
     <p>Impulsamos PYMEs mexicanas con tecnología inteligente</p>
-    <a href="#formulario" class="btn">Solicitar diagnóstico</a>
+    <a href="#" class="btn" id="openForm">Solicitar diagnóstico gratuito</a>
   </div>
 </header>
 
@@ -94,15 +94,15 @@
   <a href="equipo.html" class="btn">Conoce más</a>
 </section>
 
-
-
-
-<section class="formulario-section" id="formulario">
-  <div class="formulario">
+<!-- Modal del formulario -->
+<div id="formularioModal">
+  <div class="modal-content">
+    <span class="close-modal">&times;</span>
+    
     <h2>Diagnóstico gratuito Tecnológico para PYMEs</h2>
     <p>Déjanos tus datos y recibe un análisis inicial de tu negocio.</p>
 
-    <form id="diagnosticoForm">
+  <form id="diagnosticoForm">
 
       <fieldset>
        <div class="campo">
@@ -221,12 +221,12 @@
   <div class="g-recaptcha" data-sitekey="6LcREZUrAAAAAN96JZPN9Wf2-ViV2kOSfvRycljR"></div>
       <button type="submit" class="btnForm">Enviar información</button>
     </form>
-    <!-- Mensaje de éxito -->
-<div id="mensaje-exito" class="mensaje-exito" style="display: none;">
-  ¡Gracias! Hemos recibido tu diagnóstico y te contactaremos pronto.
-</div>
+
+    <div id="mensaje-exito" class="mensaje-exito" style="display: none;">
+      ¡Gracias! Hemos recibido tu diagnóstico y te contactaremos pronto.
+    </div>
   </div>
-</section>
+</div>
 
 
 <section class="contacto" id="contacto">
