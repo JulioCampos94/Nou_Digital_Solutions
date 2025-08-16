@@ -7,29 +7,6 @@ emailjs.init("NodGXAGZagwbOp8lV");
 const form = document.getElementById('diagnosticoForm');
 const mensajeExito = document.getElementById('mensaje-exito');
 
-const modal = document.getElementById('modalFormulario');
-const btnAbrir = document.getElementById('abrirForm');
-const btnCerrar = modal.querySelector('.cerrar');
-
-// --- FUNCIONES MODAL ---
-btnAbrir.addEventListener('click', function(e) {
-  e.preventDefault();
-  modal.style.display = 'flex';
-});
-
-btnCerrar.addEventListener('click', function() {
-  modal.style.display = 'none';
-});
-
-// Cerrar modal al hacer clic fuera del contenido
-window.addEventListener('click', function(e) {
-  if (e.target === modal) {
-    modal.style.display = 'none';
-  }
-});
-
-// --- ENVÍO DEL FORMULARIO ---
-
 form.addEventListener('submit', function (e) {
 
     e.preventDefault();
@@ -85,9 +62,7 @@ form.addEventListener('submit', function (e) {
   emailjs.sendForm("service_ze32riq", "template_dloic2p", form, "NodGXAGZagwbOp8lV")
     .then(() => {
       console.log('✅ Correo enviado correctamente');
-      // Cerrar modal después del envío
-      const modal = document.getElementById('modalFormulario');
-      if (modal) modal.style.display = 'none';
+      form.reset();
       mostrarMensajeExito();
     })
     .catch((error) => {
