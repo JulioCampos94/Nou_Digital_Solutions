@@ -50,6 +50,15 @@ body {
   margin-top: 1.5rem;
 }
 
+/* Icono para cada perfil */
+.bio-icon {
+  text-align: center;
+  font-size: 3rem;
+  color: #0ea5e9; /* mismo azul que usas en otros iconos */
+  margin-bottom: 1rem;
+}
+
+
 /* Párrafos y listas legibles */
 .bio-card p {
   margin: 0 0 1rem 0;
