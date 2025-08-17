@@ -136,30 +136,8 @@ body {
 
 /* ===== SECCIONES GENERALES ===== */
 section {
-  padding-top: 5rem; /* antes estaba 4rem */
-  padding-bottom: 5rem;
+  padding: 4rem 2rem;
 }
-
-/* Pequeña línea divisoria sutil */
-section:not(:last-child)::after {
-  content: "";
-  display: block;
-  height: 1px;
-  background: #e2e8f0;
-  margin: 3rem auto 0;
-  width: 80%;
-  opacity: 0.5;
-}
-
-/* Fondos alternos para diferenciar bloques (opcional) */
-section:nth-of-type(even) {
-  background-color: #f8fafc; /* bloques claros */
-}
-
-section:nth-of-type(odd) {
-  background-color: #ffffff; /* bloques blancos */
-}
-
 
 h2 {
   text-align: center;
