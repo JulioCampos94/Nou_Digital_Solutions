@@ -91,12 +91,12 @@ body {
   background: linear-gradient(135deg, #0f172a, #1e293b);
   color: #fff;
   text-align: center;
-  padding: 6rem 2rem; /* menos altura */
+  padding: 6rem 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  border-bottom: 4px solid #38bdf8; /* toque profesional */
+  border-bottom: 4px solid #38bdf8;
 }
 
 .hero h1 {
@@ -136,30 +136,51 @@ body {
 
 /* ===== SECCIONES GENERALES ===== */
 section {
-  padding: 4rem 2rem;
+  padding: 5rem 2rem; /* más espacio vertical */
+  border-top: 1px solid #e2e8f0; /* división sutil */
+  position: relative;
 }
 
+/* Fondo alternado para diferenciar bloques */
+section:nth-of-type(even) {
+  background-color: #f8fafc;
+}
+
+section:nth-of-type(odd) {
+  background-color: #ffffff;
+}
+
+/* Divider decorativo sutil */
+section::after {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #e2e8f0;
+  margin: 3rem auto 0;
+  width: 80%;
+}
+
+/* Títulos */
 h2 {
   text-align: center;
   font-size: 2rem;
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   color: #1e293b;
 }
 
 p {
   font-size: 1.1rem;
-  text-align: center;
+  text-align: justify;
   max-width: 800px;
   margin: auto;
   margin-bottom: 1rem;
 }
 
-/* ===== HIGHLIGHTS (Misión / Visión) ===== */
+/* ===== HIGHLIGHTS ===== */
 .highlights {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
   gap: 2rem;
-  background: #f8fafc;
   padding: 3rem 2rem;
 }
 
@@ -185,8 +206,7 @@ p {
 
 /* ===== SERVICIOS ===== */
 .servicios {
-  background-color: #f1f5f9;
-  border-top: 1px solid #e2e8f0;
+  border-top: none;
   border-bottom: 1px solid #e2e8f0;
 }
 
@@ -221,14 +241,8 @@ p {
   font-size: 0.95rem;
 }
 
-.icono {
-  color: #0ea5e9;
-  margin-bottom: 0.5rem;
-}
-
 /* ===== EQUIPO ===== */
 .equipo {
-  background: #f9fafb;
   text-align: center;
 }
 
@@ -252,49 +266,49 @@ p {
 }
 
 /* ===== FORMULARIO ===== */
-.formulario-section {
-  background-color: #f1f5f9;
+#formularioModal {
+  display: none;
+  position: fixed;
+  z-index: 10000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
 }
 
-.formulario {
-  max-width: 900px;
-  margin: 0 auto;
-  background: white;
+#formularioModal .modal-content {
+  background-color: white;
   padding: 2rem;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  max-width: 900px;
+  width: 100%;
+  max-height: 95vh;
+  overflow-y: auto;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  position: relative;
 }
 
-.formulario h2 {
-  text-align: center;
-  margin-bottom: 1.5rem;
+.close-modal {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
   color: #0ea5e9;
-}
-
-fieldset {
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 1rem 1.5rem 2rem;
-  margin-bottom: 2rem;
-}
-
-legend {
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 0 0.5rem;
-  color: #1e293b;
-}
-
-label {
-  display: block;
-  margin-top: 1rem;
-  font-weight: 600;
-  color: #334155;
 }
 
 input[type="text"],
 input[type="number"],
-textarea {
+input[type="email"],
+input[type="tel"],
+textarea,
+select {
   width: 100%;
   padding: 0.6rem 0.8rem;
   margin-top: 0.3rem;
@@ -328,7 +342,6 @@ textarea {
   font-weight: 700;
   font-size: 1.1rem;
   cursor: pointer;
-  transition: background-color 0.3s ease;
   display: block;
   margin: 1rem auto 0;
 }
@@ -337,36 +350,8 @@ textarea {
   background-color: #0284c7;
 }
 
-/* Mensaje de éxito */
-.mensaje-exito {
-  display: none;
-  background-color: #dff0d8;
-  color: #3c763d;
-  border: 1px solid #d6e9c6;
-  padding: 1rem;
-  margin: 2rem auto;
-  max-width: 600px;
-  text-align: center;
-  border-radius: 8px;
-  font-weight: bold;
-  opacity: 0;
-  transition: opacity 0.5s ease-in-out;
-}
-
-.mensaje-exito.show {
-  display: block;
-  opacity: 1;
-}
-
-#exitoModal .modal-contenido {
-  text-align: center;
-  background-color: #e6f7e6; /* un verde clarito */
-  border-left: 5px solid #28a745; /* borde verde */
-}
-
-/* ===== CONTACTO PROFESIONAL ===== */
+/* ===== CONTACTO ===== */
 .contacto {
-  background-color: #f9fafb;
   display: flex;
   justify-content: center;
   padding: 4rem 2rem;
@@ -388,127 +373,11 @@ textarea {
   box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
-.contacto .contact-card h2 {
-  font-size: 1.8rem;
-  color: #1e293b;
-  margin-bottom: 1rem;
-}
-
-.contacto .contact-card p {
-  font-size: 1.1rem;
-  color: #334155;
-  margin-bottom: 0;
-  line-height: 1.6;
-}
-
 /* ===== FOOTER ===== */
 footer {
   background-color: #e5e7eb;
   padding: 1rem;
   text-align: center;
   font-size: 0.9rem;
-  color: #555;
-}
-
-
-/* ===== MODAL FORMULARIO ===== */
-#formularioModal {
-  display: none;
-  position: fixed;
-  z-index: 10000;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  background-color: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-#formularioModal .modal-content {
-  background-color: white;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 900px;
-  width: 100%;
-  max-height: 95vh; /* limita altura máxima al 95% del viewport */
-  overflow-y: auto; /* permite scroll interno */
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  position: relative;
-}
-
-.close-modal {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  font-size: 1.5rem;
-  cursor: pointer;
-  font-weight: bold;
-  color: #0ea5e9;
-}
-
-@media (max-width: 768px) {
-  #formularioModal .modal-content {
-    padding: 1.5rem;
-  }
-}
-
-
-/* ===== MODAL ÉXITO (LIMPIO) ===== */
-#exitoModal {
-  display: none;
-  position: fixed;
-  z-index: 10001;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.6);
-  justify-content: center;
-  align-items: center;
-  padding: 2rem;
-}
-
-#exitoModal .modal-content,
-#exitoModal .modal-contenido {
-  background-color: #ffffff;
-  padding: 2rem;
-  border-radius: 12px;
-  max-width: 500px;
-  width: 100%;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-  position: relative;
-  text-align: center;
-}
-
-/* Botón de cerrar arriba a la derecha */
-#exitoModal .close-exito {
-  position: absolute;
-  top: 12px;
-  right: 16px;
-  font-size: 1.4rem;
-  font-weight: bold;
-  color: #000;
-  background: none;
-  border: none;
-  cursor: pointer;
-  line-height: 1;
-}
-
-#exitoModal .close-exito:hover {
-  color: #555;
-}
-
-#exitoModal h3 {
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-#exitoModal p {
-  font-size: 1rem;
   color: #555;
 }
