@@ -58,6 +58,12 @@ body {
   margin-bottom: 1rem;
 }
 
+/* Párrafos y listas justificados */
+.bio-card p,
+.bio-card ul {
+  text-align: justify;
+}
+
 
 /* Párrafos y listas legibles */
 .bio-card p {
