@@ -454,3 +454,73 @@ footer {
     padding: 1.5rem;
   }
 }
+
+
+/* ===== MODAL ÉXITO (AGREGAR AL FINAL) ===== */
+#exitoModal {
+  display: none;                 /* oculto por defecto */
+  position: fixed;
+  z-index: 10001;                /* por encima del formulario (10000) */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6); /* overlay oscuro */
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+/* Soporta .modal-content o .modal-contenido */
+#exitoModal .modal-content,
+#exitoModal .modal-contenido {
+  background-color: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;              /* evita que se salga de la pantalla */
+  overflow-y: auto;              /* scroll interno si es necesario */
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+  position: relative;
+  text-align: center;
+  border-left: 5px solid #28a745; /* acento de éxito */
+}
+
+/* Títulos y párrafos en el modal de éxito */
+#exitoModal .modal-content h3,
+#exitoModal .modal-contenido h3 {
+  margin-bottom: 1rem;
+  color: #28a745;
+}
+
+#exitoModal .modal-content p,
+#exitoModal .modal-contenido p {
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+  color: #2e7d32;
+}
+
+/* Botón de cerrar (usa el id que tienes en JS) */
+#cerrarExito {
+  background-color: #28a745;
+  color: #ffffff;
+  border: none;
+  padding: 0.7rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
+}
+
+#cerrarExito:hover {
+  background-color: #218838;
+}
+
+@media (max-width: 768px) {
+  #exitoModal .modal-content,
+  #exitoModal .modal-contenido {
+    padding: 1.5rem;
+    max-width: 90%;
+  }
+}
