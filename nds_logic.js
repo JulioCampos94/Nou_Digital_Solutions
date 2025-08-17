@@ -6,6 +6,9 @@ emailjs.init("NodGXAGZagwbOp8lV");
 
 const form = document.getElementById('diagnosticoForm');
 const mensajeExito = document.getElementById('mensaje-exito');
+const openBtn = document.getElementById('openForm');
+const modal = document.getElementById('formularioModal');
+const closeBtn = document.querySelector('.close-modal');
 
 form.addEventListener('submit', function (e) {
 
@@ -61,7 +64,12 @@ form.addEventListener('submit', function (e) {
   // Enviar con EmailJS (✅ con clave pública como 4to parámetro)
   emailjs.sendForm("service_ze32riq", "template_dloic2p", form, "NodGXAGZagwbOp8lV")
     .then(() => {
+      modal.style.display = 'none';
+      mensajeExito.style.display = 'block';
       console.log('✅ Correo enviado correctamente');
+      setTimeout(() => {
+        mensajeExito.style.display = 'none';
+      }, 8000);
       form.reset();
       mostrarMensajeExito();
     })
@@ -92,9 +100,6 @@ function mostrarMensajeExito() {
 }
 
 // Abrir y cerrar modal
-const openBtn = document.getElementById('openForm');
-const modal = document.getElementById('formularioModal');
-const closeBtn = document.querySelector('.close-modal');
 
 openBtn.addEventListener('click', e => {
   e.preventDefault();
