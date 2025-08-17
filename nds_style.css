@@ -349,6 +349,19 @@ textarea {
   text-align: center;
   border-radius: 8px;
   font-weight: bold;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.mensaje-exito.show {
+  display: block;
+  opacity: 1;
+}
+
+#exitoModal .modal-contenido {
+  text-align: center;
+  background-color: #e6f7e6; /* un verde clarito */
+  border-left: 5px solid #28a745; /* borde verde */
 }
 
 /* ===== CONTACTO PROFESIONAL ===== */

@@ -5,16 +5,17 @@ console.log("Nou Digital Solutions – página cargada correctamente.");
 emailjs.init("NodGXAGZagwbOp8lV");
 
 const form = document.getElementById('diagnosticoForm');
-const mensajeExito = document.getElementById('mensaje-exito');
 const openBtn = document.getElementById('openForm');
 const modal = document.getElementById('formularioModal');
 const closeBtn = document.querySelector('.close-modal');
 
+const exitoModal = document.getElementById('exitoModal');
+const cerrarExito = document.getElementById('cerrarExito');
+
 form.addEventListener('submit', function (e) {
+  e.preventDefault();
 
-    e.preventDefault();
-
-    // ✅ Verificar que el captcha fue completado
+  // ✅ Verificar que el captcha fue completado
   const recaptchaResponse = grecaptcha.getResponse();
   if (!recaptchaResponse) {
     alert("Por favor, verifica que no eres un robot.");
@@ -55,23 +56,27 @@ form.addEventListener('submit', function (e) {
   }
   barrerasInput.value = barrerasCombined;
 
-    // ✅ Agrega este log antes de enviar
   console.log('📨 Enviando datos:', {
     intereses: interesesCombined,
     barreras: barrerasCombined
   });
 
-  // Enviar con EmailJS (✅ con clave pública como 4to parámetro)
+  // Enviar con EmailJS
   emailjs.sendForm("service_ze32riq", "template_dloic2p", form, "NodGXAGZagwbOp8lV")
     .then(() => {
-      modal.style.display = 'none';
-      mensajeExito.style.display = 'block';
       console.log('✅ Correo enviado correctamente');
-      setTimeout(() => {
-        mensajeExito.style.display = 'none';
-      }, 8000);
+
+      // Cerrar el modal del formulario
+      modal.style.display = 'none';
+
+      // Abrir el modal de éxito
+      exitoModal.style.display = 'flex';
+
+      // Limpiar formulario
       form.reset();
-      mostrarMensajeExito();
+
+      // Resetear reCAPTCHA
+      grecaptcha.reset();
     })
     .catch((error) => {
       console.error('❌ Error al enviar el correo:', error);
@@ -87,32 +92,28 @@ if (navToggle) {
   });
 }
 
-// Mostrar mensaje visual de éxito
-function mostrarMensajeExito() {
-  if (!mensajeExito) return;
-
-  mensajeExito.style.display = 'block';
-  mensajeExito.scrollIntoView({ behavior: 'smooth' });
-
-  setTimeout(() => {
-    mensajeExito.style.display = 'none';
-  }, 4000);
-}
-
-// Abrir y cerrar modal
-
+// Abrir modal de formulario
 openBtn.addEventListener('click', e => {
   e.preventDefault();
   modal.style.display = 'flex';
 });
 
+// Cerrar modal formulario
 closeBtn.addEventListener('click', () => {
   modal.style.display = 'none';
 });
 
-// Cerrar si clic fuera del contenido
+// Cerrar modal éxito
+cerrarExito.addEventListener('click', () => {
+  exitoModal.style.display = 'none';
+});
+
+// Cerrar si clic fuera del contenido (formulario)
 window.addEventListener('click', e => {
   if (e.target === modal) {
     modal.style.display = 'none';
+  }
+  if (e.target === exitoModal) {
+    exitoModal.style.display = 'none';
   }
 });
