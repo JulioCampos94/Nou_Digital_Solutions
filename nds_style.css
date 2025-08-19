@@ -512,3 +512,27 @@ footer {
   font-size: 1rem;
   color: #555;
 }
+
+/* ===== FIX CONTACTO EMAIL ===== */
+.contacto .contact-card p {
+  font-size: 1.1rem;
+  color: #334155;
+  margin-bottom: 0;
+  line-height: 1.6;
+
+  word-wrap: break-word;      /* permite romper palabras largas */
+  overflow-wrap: anywhere;    /* rompe la cadena en cualquier punto si es necesario */
+  text-align: center;         /* mantiene alineado en móviles */
+}
+
+/* Evita que se corte en desktop */
+.contacto .contact-card p span {
+  white-space: nowrap;
+}
+
+/* En móviles pequeños permitimos salto de línea */
+@media (max-width: 480px) {
+  .contacto .contact-card p span {
+    white-space: normal;
+  }
+}
