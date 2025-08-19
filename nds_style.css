@@ -530,9 +530,10 @@ footer {
   white-space: nowrap;
 }
 
-/* En móviles pequeños permitimos salto de línea */
+/* Ajuste dinámico del correo en pantallas pequeñas */
 @media (max-width: 480px) {
   .contacto .contact-card p span {
-    white-space: normal;
+    font-size: clamp(0.8rem, 3vw, 1rem); /* fluido: nunca menor a 0.8rem ni mayor a 1rem */
+    white-space: nowrap; /* evita que se parta */
   }
 }
